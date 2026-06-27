@@ -112,8 +112,8 @@ def run_year(year: int, use_pre_filter: bool = True,
     perf_long  = _load_performance(perf_long_f)
     perf_short = _load_performance(perf_short_f)
 
-    phase = "LEARNING" if year <= LEARNING_END_YEAR else "TESTING"
-    freeze_weights = (phase == "TESTING") or (wf_weights_file is not None)
+    phase = "TESTING"   # dumbagent: always testing, never adaptive
+    freeze_weights = True
 
     log.info(f"Starting {year} [{phase}] — weights {'FROZEN' if freeze_weights else 'adaptive'} "
              f"— SHORT {'ON' if SHORT_ENABLED else 'OFF'} "
