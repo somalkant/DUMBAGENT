@@ -71,14 +71,8 @@ def reload_lifetime_winrates(path: Path | str) -> None:
 
 
 def _get_wr(strategy: str, direction: int) -> float:
-    """Direction-specific lifetime win rate (0–100). Falls back to 50.0 if unknown."""
-    entry = _LIFETIME_WR.get(strategy)
-    if entry is None:
-        return 50.0
-    if isinstance(entry, dict):
-        key = "long" if direction == +1 else "short"
-        return float(entry.get(key, 50.0))
-    return float(entry)  # backward compat: plain float value
+    """Hardcoded at 60.0 for all strategies/directions (dumbagent baseline)."""
+    return 60.0
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -638,15 +632,8 @@ def _best_signal(signals: dict, direction: int):
     return max(candidates, key=_driver_score)
 
 
-DRIVER_BLOCKED = {
-    "VOL-SPIKE",
-    "ORB-30",
-    "ORB-15",
-    "SR-BREAK",
-    "REL-STR",
-    "DESC-TRI",   # 3-year confirmed: 27 driver trades, 0 target hits, Rs -11,247 net
-}
-CONVICTION_BLOCKED = DRIVER_BLOCKED
+DRIVER_BLOCKED = set()      # dumbagent: all strategies can drive
+CONVICTION_BLOCKED = set()  # dumbagent: no conviction blocking
 
 
 def _conviction_multiplier(driver_strategy: str, direction: int = +1) -> tuple[float, str]:
@@ -842,19 +829,7 @@ def _load_performance(filename: str) -> dict:
 
 
 def _load_weights(wf_weights_file: Path | None = None) -> dict:
-    path = wf_weights_file if wf_weights_file else WEIGHTS_FILE
-    if path and path.exists():
-        with open(path) as f:
-            raw = json.load(f)
-        # Migrate any plain-float values to dict format
-        migrated = {}
-        for k, v in raw.items():
-            if isinstance(v, dict):
-                migrated[k] = v
-            else:
-                migrated[k] = {"long": float(v), "short": 1.0}
-        return migrated
-    # Default: all strategies start at weight 1.0 for both directions
+    # dumbagent: all strategy weights hardcoded at 1.0 long and short
     return {name: {"long": 1.0, "short": 1.0} for name in STRATEGY_NAMES}
 
 

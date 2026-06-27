@@ -1,22 +1,11 @@
 """
-Full Walk-Forward Pipeline — runs the entire 2016-2026 backtest automatically.
+DumbAgent Test Pipeline — tests 2021-2026 with flat weights and fixed 60% win rates.
 
-WF schedule:
-  Train 2016-2018 → freeze WF1 → test 2019
-  Train 2019      → freeze WF2 → test 2020
-  Train 2020      → freeze WF3 → test 2021
-  Train 2021      → freeze WF4 → test 2022
-  Train 2022      → freeze WF5 → test 2023-2026  ← LIVE WEIGHTS
-
-Outputs (used by live agent):
-  checkpoints/strategy_weights.json        — final WF5 weights (long + short per strategy)
-  checkpoints/strategy_lifetime_winrates.json — lifetime win rates (agreement filter + conviction)
-
-Runtime: ~3-4 days on t3.xlarge. Safe to Ctrl+C and resume — each year checkpoints progress.
+No training. No freezing. All strategy weights = 1.0 (long & short).
+All lifetime win rates = 60%. No blocked strategies.
 
 Usage:
-    python run_full_pipeline.py              # full run from the beginning
-    python run_full_pipeline.py --from 2020  # resume from a specific year (skip earlier)
+    python run_full_pipeline.py              # run all test years
     python run_full_pipeline.py --dry-run    # print the plan without executing
 """
 
@@ -31,37 +20,20 @@ BASE_DIR = Path(__file__).parent
 LOG_DIR  = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
-# Full WF pipeline — each step is (type, year_or_years, wf_window_or_None)
-# type: "train" | "freeze" | "test"
+# Test-only pipeline — flat weights (1.0), 60% win rates, no blocked strategies
 PIPELINE = [
-    ("train",  2016, None),
-    ("train",  2017, None),
-    ("train",  2018, None),
-    ("freeze", None,   1),   # WF1: trained on 2016-2018
-    ("test",   2019,   1),
-    ("train",  2019, None),
-    ("freeze", None,   2),   # WF2: trained on 2016-2019
-    ("test",   2020,   2),
-    ("train",  2020, None),
-    ("freeze", None,   3),   # WF3: trained on 2016-2020
-    ("test",   2021,   3),
-    ("train",  2021, None),
-    ("freeze", None,   4),   # WF4: trained on 2016-2021
-    ("test",   2022,   4),
-    ("train",  2022, None),
-    ("freeze", None,   5),   # WF5: final live weights (trained 2016-2022)
-    ("test",   2023,   5),
-    ("test",   2024,   5),
-    ("test",   2025,   5),
-    ("test",   2026,   5),
+    ("test", 2021, None),
+    ("test", 2022, None),
+    ("test", 2023, None),
+    ("test", 2024, None),
+    ("test", 2025, None),
+    ("test", 2026, None),
 ]
 
 
 def _label(step) -> str:
     kind, year, wf = step
-    if kind == "train":  return f"TRAIN {year}"
-    if kind == "freeze": return f"FREEZE WF-{wf}"
-    if kind == "test":   return f"TEST  {year}  [WF-{wf}]"
+    if kind == "test": return f"TEST  {year}"
 
 
 def _run(cmd: list[str], log_file: Path) -> int:
@@ -83,9 +55,7 @@ def _run(cmd: list[str], log_file: Path) -> int:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Full WF pipeline runner")
-    parser.add_argument("--from", dest="from_year", type=int, default=None,
-                        help="Skip all steps before this training year")
+    parser = argparse.ArgumentParser(description="DumbAgent test pipeline")
     parser.add_argument("--dry-run", action="store_true",
                         help="Print the plan without executing")
     args = parser.parse_args()
@@ -113,21 +83,19 @@ def main():
 
     # ── dry run ───────────────────────────────────────────────────────────────
     if args.dry_run:
-        print("\nFull WF pipeline — execution plan:")
+        print("\nDumbAgent test pipeline — execution plan:")
         print(f"{'Step':<5}  {'Action':<25}  {'Log'}")
-        print("─" * 65)
+        print("─" * 55)
         for i, step in enumerate(PIPELINE, 1):
             kind, year, wf = step
-            log_name = (f"analysis_{year}.log" if kind == "train"
-                        else f"testing_{year}.log" if kind == "test"
-                        else f"freeze_wf{wf}.log")
-            skip = " ← SKIP" if args.from_year and kind == "train" and year < args.from_year else ""
-            print(f"{i:<5}  {_label(step):<25}  {log_name}{skip}")
+            log_name = f"testing_{year}.log"
+            print(f"{i:<5}  {_label(step):<25}  {log_name}")
         print()
         return
 
     log.info("=" * 65)
-    log.info("FULL WF PIPELINE STARTING")
+    log.info("DUMBAGENT TEST PIPELINE STARTING")
+    log.info("  weights=1.0 all strategies | winrates=60% | no blocked list")
     log.info(f"Pipeline log: {pipeline_log}")
     log.info(f"Python      : {python}")
     log.info("=" * 65)
@@ -138,34 +106,12 @@ def main():
     for i, step in enumerate(PIPELINE, 1):
         kind, year, wf = step
 
-        # ── skip logic ────────────────────────────────────────────────────────
-        if args.from_year and kind == "train" and year < args.from_year:
-            log.info(f"[{i}/{len(PIPELINE)}] SKIP {_label(step)} (--from {args.from_year})")
-            continue
-        # If we're skipping training years, also skip freezes for already-done WF windows.
-        # The checkpoint file is the guard — if it exists, skip the freeze.
-        if kind == "freeze":
-            frozen = BASE_DIR / "checkpoints" / f"wf{wf}_weights.json"
-            if frozen.exists() and args.from_year:
-                log.info(f"[{i}/{len(PIPELINE)}] SKIP {_label(step)} ({frozen.name} already exists)")
-                continue
-
         log.info("")
         log.info(f"[{i}/{len(PIPELINE)}] ── {_label(step)} ──────────────────────────────────")
         step_start = datetime.now()
 
-        # ── build command ─────────────────────────────────────────────────────
-        if kind == "train":
-            step_log = LOG_DIR / f"analysis_{year}.log"
-            cmd = [python, "run_analysis.py", str(year)]
-
-        elif kind == "freeze":
-            step_log = LOG_DIR / f"freeze_wf{wf}.log"
-            cmd = [python, "scripts/wf_freeze.py", "--window", str(wf)]
-
-        elif kind == "test":
-            step_log = LOG_DIR / f"testing_{year}_wf{wf}.log"
-            cmd = [python, "run_testing.py", str(year), "--wf-window", str(wf)]
+        step_log = LOG_DIR / f"testing_{year}.log"
+        cmd = [python, "run_testing.py", str(year)]
 
         # ── execute ───────────────────────────────────────────────────────────
         rc = _run(cmd, step_log)
@@ -174,7 +120,7 @@ def main():
         if rc != 0:
             log.error(f"[{i}] FAILED with exit code {rc} after {elapsed}")
             log.error(f"     Check log: {step_log}")
-            log.error("Pipeline halted. Fix the error and resume with --from <year>")
+            log.error("Pipeline halted.")
             sys.exit(rc)
 
         log.info(f"[{i}] DONE in {str(elapsed).split('.')[0]}  →  log: {step_log.name}")
@@ -188,10 +134,9 @@ def main():
     log.info(f"Total time : {str(total).split('.')[0]}")
     log.info(f"Steps done : {steps_done}/{len(PIPELINE)}")
     log.info("")
-    log.info("Outputs for live agent:")
-    log.info("  checkpoints/strategy_weights.json          ← WF5 weights (long+short)")
-    log.info("  checkpoints/strategy_lifetime_winrates.json ← win rates for agreement filter")
-    log.info("  checkpoints/wf_results.json                ← which WF windows passed gate")
+    log.info("Outputs:")
+    log.info("  data/trade_logs/paper_trades.csv  ← all paper trades 2021-2026")
+    log.info("  logs/testing_<year>.log           ← per-year results")
     log.info("=" * 65)
 
     # ── upload results to S3 so local machine can pull them ──────────────────
