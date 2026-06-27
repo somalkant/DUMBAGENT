@@ -205,13 +205,13 @@ def _upload_results_to_s3(python: str, pipeline_log: Path) -> None:
     log.info("Uploading results to S3...")
 
     bucket = "amzn-s3-somal-bucket"
-    prefix = "tradingagent"
+    prefix = "dumbagent"
 
     # Use aws cli (already installed on EC2 via ec2_setup.sh)
     aws = shutil.which("aws")
     if not aws:
         log.warning("aws CLI not found — skipping S3 upload. Copy checkpoints/ manually via SCP.")
-        log.warning("  scp -i your-key.pem ubuntu@<EC2-IP>:~/TRAIAGENT/checkpoints/ .")
+        log.warning("  scp -i your-key.pem ubuntu@<EC2-IP>:~/DUMBAGENT/checkpoints/ .")
         return
 
     dirs = [
