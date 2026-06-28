@@ -17,6 +17,10 @@ numpy>=1.26.0
 # Free data for global cues (SGX Nifty, Dow futures)
 yfinance>=0.2.36
 
+# Groww broker + TOTP auth
+growwapi>=0.1.0
+pyotp>=2.9.0
+
 # Environment / Config
 python-dotenv>=1.0.0
 
