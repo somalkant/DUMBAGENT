@@ -18,6 +18,7 @@ Adding a new broker:
   - The selection menu here picks it up automatically
 """
 
+import argparse
 import ctypes
 import logging
 import sys
@@ -92,6 +93,10 @@ def _select_broker(log):
 
 # ── main ──────────────────────────────────────────────────────────────────────
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--broker", default=None, help="Broker name (e.g. zerodha, groww)")
+    args, _ = parser.parse_known_args()
+
     log_file = _setup_logging()
     log = logging.getLogger(__name__)
 
@@ -100,7 +105,12 @@ def main():
     log.info(f"Log file: {log_file}")
 
     try:
-        broker       = _select_broker(log)
+        if args.broker:
+            from brokers import get_broker
+            broker = get_broker(args.broker)
+            log.info(f"Broker: {broker.display_name} (from --broker flag)")
+        else:
+            broker = _select_broker(log)
         access_token = broker.authenticate(log)
         _run_agent(access_token, broker.name, log)
     except KeyboardInterrupt:
