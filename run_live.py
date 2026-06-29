@@ -30,11 +30,13 @@ ES_SYSTEM_REQUIRED = 0x00000001
 
 
 def _keep_awake():
-    ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED)
+    if sys.platform == "win32":
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED)
 
 
 def _allow_sleep():
-    ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+    if sys.platform == "win32":
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
 
 
 # ── logging ───────────────────────────────────────────────────────────────────
