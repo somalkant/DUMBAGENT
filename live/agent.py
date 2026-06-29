@@ -346,6 +346,7 @@ def _run_market_loop(ws_holder: list, last_tick: list, make_ticker,
         now_t = now.time()
 
         if now_t < MARKET_OPEN:
+            last_tick[0] = datetime.now()  # pre-market silence is normal; reset stale clock
             continue   # still pre-market, keep waiting
 
         # ── Ticker staleness check ───────────────────────────────────────────
