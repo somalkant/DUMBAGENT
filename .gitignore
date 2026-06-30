@@ -39,3 +39,17 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Index parquet data (too large — lives in S3)
+data/index/
+
+# Year-based trade log parquets (too large — lives in S3)
+data/trade_logs/20*/
+
+# Daily generated checkpoint files
+checkpoints/access_token.json
+checkpoints/instruments.json
+checkpoints/watchlist_*.json
+checkpoints/live_candles_*.json
+checkpoints/progress.json
+checkpoints/strategy_performance_*.json

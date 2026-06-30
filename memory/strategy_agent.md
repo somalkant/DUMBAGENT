@@ -2158,3 +2158,591 @@ LONG: 75.1% WR, avg Rs 3,590. SHORT: 70.2% WR, avg Rs 2,283. Total LONG P&L (Rs 
 11:xx+: small sample, mixed.
 82% of all LONG trades enter in the 09:xx window. The opening-range patterns (CAMARILLA, VPOC) fire early by design. Late-day LONG entry quality collapses the same way SHORT does.
 **Rule:** The 11:30 hard cutoff applies to both directions equally. Implement as a shared NO_ENTRY_AFTER update (currently 14:00 — move to 11:30 after validating across 2024–2026 training).
+
+## Year 2021 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2021
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2022 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2022
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2023 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2023
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2024 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2024
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2025 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2025
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2026 Summary
+- Total trades        : 0 (0 LONG, 0 SHORT)
+- Exact target hits   : 0 (0%)  — price reached target
+- Profitable exits    : 0 (0%)  — TIME_EXIT with positive P&L
+- Losses              : 0 (0%)  — stopped out or negative exit
+- Effective win rate  : 0%
+- Total P&L           : Rs 0  (Long Rs 0 | Short Rs 0)
+
+### Strategy Performance — 2026
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ORB-30             | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PDH-PDL            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-CONT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VOL-SPIKE          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-REV           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RSI-EXT            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BOLLINGER          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| GAP-FADE           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| EMA-CROSS          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SUPERTREND         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| MACD               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| SR-BREAK           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CPR                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| CAMARILLA          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ADX-FILTER         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VWAP-STDDEV        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| STOCHASTIC         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| VPOC               | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| REL-STR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-BTM            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FALL-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| ASC-TRI            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BULL-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DAILY-BIAS         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DBL-TOP            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DESC-TRI           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| RISE-WEDGE         | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| BEAR-ENGULF        | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| PIN-BAR            | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+
+## Year 2021 Summary
+- Total trades        : 494 (247 LONG, 247 SHORT)
+- Exact target hits   : 137 (27.7%)  — price reached target
+- Profitable exits    : 150 (30.4%)  — TIME_EXIT with positive P&L
+- Losses              : 207 (41.9%)  — stopped out or negative exit
+- Effective win rate  : 58.1%
+- Total P&L           : Rs 1,337,493  (Long Rs 1,098,385 | Short Rs 239,108)
+
+### Strategy Performance — 2021
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  50.5% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  52.0% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  50.5% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  63.5% |   48 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  81.0% |   42 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  19.4% |   50 |   40 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  25.8% |   39 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  34.5% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  75.0% |    1 |    1 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  42.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  41.0% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  43.0% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  50.5% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  47.0% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  41.6% |   50 |   45 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  46.5% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  50.0% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  24.0% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  45.0% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  46.0% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  50.0% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  54.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  37.5% |    4 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  55.9% |   34 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  62.5% |   16 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  46.5% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  43.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  42.9% |    0 |   21 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  40.0% |    0 |    5 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FAILED-BO          | 1.00 | 1.00 |  30.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  34.8% |    0 |   23 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  30.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  47.5% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  49.5% |   50 |   50 | OK |
+
+## Year 2022 Summary
+- Total trades        : 494 (247 LONG, 247 SHORT)
+- Exact target hits   : 120 (24.3%)  — price reached target
+- Profitable exits    : 159 (32.2%)  — TIME_EXIT with positive P&L
+- Losses              : 215 (43.5%)  — stopped out or negative exit
+- Effective win rate  : 56.5%
+- Total P&L           : Rs 882,731  (Long Rs 690,339 | Short Rs 192,393)
+
+### Strategy Performance — 2022
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  43.5% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  46.0% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  43.5% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  52.0% |   50 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  76.0% |   50 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  23.0% |   50 |   50 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  29.0% |   50 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  41.0% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  55.6% |    5 |    4 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  34.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  39.5% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  42.0% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  38.0% |   50 |   50 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  44.0% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  25.0% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  45.0% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  45.0% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  36.5% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  55.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  50.0% |    8 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  58.0% |   50 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  53.8% |   39 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  40.5% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  38.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  38.0% |    0 |   50 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  37.5% |    0 |   12 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |  50.0% |    0 |    8 | OK |
+| FAILED-BO          | 1.00 | 1.00 |  25.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  27.0% |    0 |   50 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  31.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  40.0% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  44.0% |   50 |   50 | OK |
+
+## Year 2023 Summary
+- Total trades        : 490 (245 LONG, 245 SHORT)
+- Exact target hits   : 115 (23.5%)  — price reached target
+- Profitable exits    : 168 (34.3%)  — TIME_EXIT with positive P&L
+- Losses              : 207 (42.2%)  — stopped out or negative exit
+- Effective win rate  : 57.8%
+- Total P&L           : Rs 919,049  (Long Rs 702,458 | Short Rs 216,590)
+
+### Strategy Performance — 2023
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  43.0% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  49.0% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  43.0% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  59.0% |   50 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  75.0% |   50 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  21.0% |   50 |   50 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  31.0% |   50 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  33.5% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  54.2% |    8 |    4 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  33.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  40.0% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  35.5% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  41.5% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  42.0% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  43.0% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  20.5% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  40.5% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  44.5% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  39.5% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  45.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  50.0% |   11 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  54.0% |   50 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  45.0% |   50 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  34.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  31.0% |    0 |   50 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  47.1% |    0 |   17 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |  42.9% |    0 |   14 | OK |
+| FAILED-BO          | 1.00 | 1.00 |  35.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  24.0% |    0 |   50 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  35.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  39.0% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  49.5% |   50 |   50 | OK |
+
+## Year 2024 Summary
+- Total trades        : 496 (248 LONG, 248 SHORT)
+- Exact target hits   : 114 (23.0%)  — price reached target
+- Profitable exits    : 141 (28.4%)  — TIME_EXIT with positive P&L
+- Losses              : 241 (48.6%)  — stopped out or negative exit
+- Effective win rate  : 51.4%
+- Total P&L           : Rs 600,986  (Long Rs 586,937 | Short Rs 14,049)
+
+### Strategy Performance — 2024
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  41.5% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  44.0% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  36.5% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  58.0% |   50 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  73.0% |   50 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  12.5% |   50 |   50 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  30.0% |   50 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  36.0% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  55.3% |   12 |    7 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  33.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  39.0% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  38.5% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  28.0% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  39.0% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  39.0% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  42.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  50.0% |   12 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  45.0% |   50 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  49.0% |   50 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  39.0% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  31.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  30.0% |    0 |   50 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  45.2% |    0 |   21 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |  43.8% |    0 |   16 | OK |
+| FAILED-BO          | 1.00 | 1.00 |  32.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  20.0% |    0 |   50 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  34.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  41.0% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  42.5% |   50 |   50 | OK |
+
+## Year 2025 Summary
+- Total trades        : 498 (249 LONG, 249 SHORT)
+- Exact target hits   : 114 (22.9%)  — price reached target
+- Profitable exits    : 167 (33.5%)  — TIME_EXIT with positive P&L
+- Losses              : 217 (43.6%)  — stopped out or negative exit
+- Effective win rate  : 56.4%
+- Total P&L           : Rs 894,935  (Long Rs 679,046 | Short Rs 215,890)
+
+### Strategy Performance — 2025
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  39.5% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  40.5% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  40.5% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  64.0% |   50 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  66.0% |   50 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  16.0% |   50 |   50 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  26.5% |   50 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  34.0% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  53.8% |   18 |    8 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  37.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  35.0% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  37.0% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  36.5% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  36.5% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  37.5% |   50 |   50 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  40.0% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  40.5% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  23.5% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  38.0% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  34.5% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  42.0% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  49.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  53.3% |   15 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  48.0% |   50 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  52.0% |   50 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  34.5% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  29.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  27.0% |    0 |   50 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  40.0% |    0 |   25 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |  41.4% |    0 |   29 | OK |
+| FAILED-BO          | 1.00 | 1.00 |  33.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  24.0% |    0 |   50 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  31.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  38.0% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  51.5% |   50 |   50 | OK |
+
+## Year 2026 Summary
+- Total trades        : 232 (116 LONG, 116 SHORT)
+- Exact target hits   : 62 (26.7%)  — price reached target
+- Profitable exits    : 66 (28.4%)  — TIME_EXIT with positive P&L
+- Losses              : 104 (44.8%)  — stopped out or negative exit
+- Effective win rate  : 55.2%
+- Total P&L           : Rs 498,484  (Long Rs 419,245 | Short Rs 79,239)
+
+### Strategy Performance — 2026
+| Strategy           | wt_long | wt_short |  Win%  | L_Sig | S_Sig | Verdict    |
+|--------------------|---------|----------|--------|-------|-------|------------|
+| ORB-15             | 1.00 | 1.00 |  47.0% |   50 |   50 | OK |
+| ORB-30             | 1.00 | 1.00 |  52.0% |   50 |   50 | OK |
+| PDH-PDL            | 1.00 | 1.00 |  45.5% |   50 |   50 | OK |
+| GAP-CONT           | 1.00 | 1.00 |  63.0% |   50 |    0 | OK |
+| VOL-SPIKE          | 1.00 | 1.00 |  78.0% |   50 |    0 | OK |
+| VWAP-REV           | 1.00 | 1.00 |  13.0% |   50 |   50 | OK |
+| RSI-EXT            | 1.00 | 1.00 |  25.0% |   50 |   50 | OK |
+| BOLLINGER          | 1.00 | 1.00 |  36.5% |   50 |   50 | OK |
+| GAP-FADE           | 1.00 | 1.00 |  53.3% |   19 |   11 | OK |
+| EMA-CROSS          | 1.00 | 1.00 |  30.0% |   50 |    0 | OK |
+| SUPERTREND         | 1.00 | 1.00 |  36.0% |   50 |   50 | OK |
+| MACD               | 1.00 | 1.00 |  33.0% |   50 |   50 | OK |
+| SR-BREAK           | 1.00 | 1.00 |  43.5% |   50 |   50 | OK |
+| NR7                | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| FIRST-CANDLE       | 1.00 | 1.00 |  40.0% |   50 |   50 | OK |
+| CPR                | 1.00 | 1.00 |  44.0% |   50 |   50 | OK |
+| CAMARILLA          | 1.00 | 1.00 |  44.5% |   50 |   50 | OK |
+| ADX-FILTER         | 1.00 | 1.00 |  48.0% |   50 |   50 | OK |
+| VWAP-STDDEV        | 1.00 | 1.00 |  20.0% |   50 |   50 | OK |
+| STOCHASTIC         | 1.00 | 1.00 |  39.5% |   50 |   50 | OK |
+| VPOC               | 1.00 | 1.00 |  44.5% |   50 |   50 | OK |
+| REL-STR            | 1.00 | 1.00 |  46.0% |   50 |   50 | OK |
+| DBL-BTM            | 1.00 | 1.00 |  41.0% |   50 |    0 | OK |
+| FALL-WEDGE         | 1.00 | 1.00 |  53.3% |   15 |    0 | OK |
+| ASC-TRI            | 1.00 | 1.00 |  46.0% |   50 |    0 | OK |
+| BULL-FLAG          | 1.00 | 1.00 |  57.0% |   50 |    0 | OK |
+| DAILY-BIAS         | 1.00 | 1.00 |  41.0% |   50 |   50 | OK |
+| DBL-TOP            | 1.00 | 1.00 |  34.0% |    0 |   50 | OK |
+| DESC-TRI           | 1.00 | 1.00 |  32.0% |    0 |   50 | OK |
+| RISE-WEDGE         | 1.00 | 1.00 |  40.4% |    0 |   26 | OK |
+| BEAR-FLAG          | 1.00 | 1.00 |  41.7% |    0 |   36 | OK |
+| FAILED-BO          | 1.00 | 1.00 |  32.0% |    0 |   50 | OK |
+| DEAD-CAT           | 1.00 | 1.00 |   n/a |    0 |    0 | NO SIGNALS |
+| OPEN-WEAK          | 1.00 | 1.00 |  28.0% |    0 |   50 | OK |
+| BEAR-ENGULF        | 1.00 | 1.00 |  25.0% |    0 |   50 | OK |
+| PIN-BAR            | 1.00 | 1.00 |  41.5% |   50 |   50 | OK |
+| INTRADAY-STRUCT    | 1.00 | 1.00 |  50.5% |   50 |   50 | OK |
